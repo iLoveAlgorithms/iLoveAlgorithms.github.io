@@ -17,7 +17,7 @@
     <main id="main" role="main">
       <div>
         <p>
-          Crack the password?
+          How do I crack the password?
         </p>
         <button onclick="revealHint(1)">Get hint</button>
       </div>
@@ -29,14 +29,15 @@
       </div>
       <div class="hint" id="hint-2">
         <p>
-          You may need a password cracker.
-          If you have john and it isn't working, you might need to add the flag --format=raw-sha256
+          You may need a password cracker.<br>
+          If you have john and it isn't working, you might need to add the flag
+          --format=raw-sha256
         </p>
         <button onclick="revealHint(3)">Need another one?</button>
       </div>
       <div class="hint" id="hint-3">
         <p>
-          If you are trying to understand secret.txt, look to the beginnings
+          If you are trying to understand secret.txt, look at the beginnings
         </p>
         <button onclick="revealHint(4)">One more clue</button>
       </div>
@@ -51,13 +52,14 @@
           We need to use a password cracker like John the Ripper to find the password.<br>
           Your output should look like this
           <img src="images/cracked-pw.png" alt="Cracked password"><br>
-          Unzip the corresponding zip file
+          <br>
+          Unzip the corresponding zip file<br>
           <img src="images/zipped.png" alt="Zip File contents"><br>
-          Take the first letter of each word - you get Ozymandias!<br>
-          Ozymandias is also adquately described by the password "ramesses" (modern name)
-          and the poem description.
-          Now that you have the poem, use the number of the marquee corresponding
-          to each line to get the answer
+          <br>
+          Looking at the first letter of each word, you get Ozymandias!<br>
+          Ozymandias is also adquately described by the password "ramesses" (modern name for Ozymandias) and the
+          poem description.<br>
+          Now that you have the poem, use the number of the marquee corresponding to each line to get the answer
           <img src="images/poem.png" alt="Letters from poem"><br>
         </p>
       </div>
