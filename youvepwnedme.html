@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mission Accomplished</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="banner">
+      <img src="/images/project_icon.png" alt="Organisation icon" width="200px" height="200px">
+      <h1>You have reached the end!</h1>
+    </header>
+    <main id="main" role="main">
+      <p>
+        Well done on making it to the end of your mission! We will be on our way to pick you up<br>
+        You hear the other door in the room open. Uh oh, have you been spotted by the suspect?<br>
+      </p>
+      <div class="centered">
+        <button class="confetti-button" onclick="ending()">Turn around</button>
+      </div>
+      <div style="display: none;" id="ending-dialogue">
+        <p>
+          Congrats on making it to the end! This mission was set up by me. I just wanted to talk about security
+          concepts with someone, but nobody was interested. Thankfully, you seem to be! Let's explore more
+          security concepts!<br>
+        </p>
+        <div class="centered">
+          <button class="confetti-button" onclick="alert(`The end! Keep being curious`)">Ok!</button>
+        </div>
+        <img src="images/confetti.gif" class="confetti-overlay" id="confetti-overlay">
+      </div>
+    </main>
+    <script>
+      function ending() {
+        alert("You have passed everything!");
+        document.getElementById("ending-dialogue").style.display = "block";
+        document.getElementById("confetti-overlay").style.opacity = "1";
+      }
+    </script>
+  </body>
+</html>
