@@ -23,34 +23,31 @@
       </div>
       <div class="hint" id="hint-1">
         <p>
-          what would ROCKYOU and John be bolded?
+          what would rockyou and John be bolded?
         </p>
         <button onclick="revealHint(2)">Didn't help? Get another hint!</button>
       </div>
       <div class="hint" id="hint-2">
         <p>
-          You may need to get a bit more familiar with XSS.<br>
-          As a start, try inputting a bold tag into the password box<br>
-          Explore more about XSS <a href="https://xss-game.appspot.com/level1">with this link</a>
+          You may need a password cracker
         </p>
         <button onclick="revealHint(3)">Need another one?</button>
       </div>
       <div class="hint" id="hint-3">
         <p>
-          Try inputting &lt;b&gt;Hello!&lt;/b&gt; and see the difference
+          If you are trying to understand secret.txt, look to the beginnings
         </p>
         <button onclick="revealHint(4)">Get solution</button>
       </div>
       <div class="hint" id="hint-4">
         <p>
-          Got the key but nothing's working? What's the name of the door lock?
+          There are 14 numbers and 14 lines in the poem...
         </p>
         <button onclick="revealHint(5)">Get solution</button>
       </div>
       <div class="hint" id="hint-5">
         <p>
-          We first see how the program takes in HTML code. By inputting a bold tag, we see that text is passed
-          directly into the DOM
+          We need to use a password cracker like John the Ripper to find the password.
           <img src="images/bold-tag.png" alt="Bold Tag">
           <img src="images/bold-tag-registered.png" alt="Output is bold">
           With that known, there are many ways to call getKey(), e.g. an image with an invalid src then
