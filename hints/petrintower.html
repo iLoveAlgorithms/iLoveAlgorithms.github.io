@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 2 Hints</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="banner">
+      <img src="/images/project_icon.png" alt="Organisation icon" width="200px" height="200px">
+      <h1>Locate the suspect!</h1>
+    </header>
+    <main id="main" role="main">
+      <div>
+        <p>
+          How do we get in?
+        </p>
+        <button onclick="revealHint(1)">Get hint</button>
+      </div>
+      <div class="hint" id="hint-1">
+        <p>
+          Press control + shift + I and go to sources and look if there is any vulnerable code.
+        </p>
+        <button onclick="revealHint(2)">Didn't help? Get another hint!</button>
+      </div>
+      <div class="hint" id="hint-2">
+        <p>
+          You may need to get a bit more familiar with XSS.<br>
+          As a start, try inputting a bold tag into the password box<br>
+          Explore more about XSS <a href="https://xss-game.appspot.com/level1">with this link</a>
+        </p>
+        <button onclick="revealHint(3)">Need another one?</button>
+      </div>
+      <div class="hint" id="hint-3">
+        <p>
+          Try inputting &lt;b&gt;Hello!&lt;/b&gt; and see the difference
+        </p>
+        <button onclick="revealHint(4)">Get solution</button>
+      </div>
+      <div class="hint" id="hint-4">
+        <p>
+          Got the key but nothing's working? What's the name of the door lock?
+        </p>
+        <button onclick="revealHint(5)">Get solution</button>
+      </div>
+      <div class="hint" id="hint-5">
+        <p>
+          We first see how the program takes in HTML code. By inputting a bold tag, we see that text is passed
+          directly into the DOM
+          <img src="images/bold-tag.png" alt="Bold Tag">
+          <img src="images/bold-tag-registered.png" alt="Output is bold">
+          With that known, there are many ways to call getKey(), e.g. an image with an invalid src then
+          onerror=getKey() but a simple way is this
+          <img src="images/script-injection.png" alt="Script Tag">
+          <img src="images/script-injection-out.png" alt="Output works" width="1000px">
+          Once you have the key, use the text given on the screen to do a Vigenère cipher with the key you just got
+          <img src="images/vigenere.png" alt="Deciphere the Vigenère" width="1000px">
+        </p>
+      </div>
+    </main>
+    <script>
+      const revealHint = (num) => {
+        document.getElementById(`hint-${num}`).style.display = 'inline-block';
+      }
+    </script>
+  </body>
+</html>
+
+

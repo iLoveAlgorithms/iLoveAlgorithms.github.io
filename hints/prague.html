@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 3 Hints</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="banner">
+      <img src="/images/project_icon.png" alt="Organisation icon" width="200px" height="200px">
+      <h1>Closing in!</h1>
+    </header>
+    <main id="main" role="main">
+      <div>
+        <p>
+          What's that sound?
+        </p>
+        <button onclick="revealHint(1)">Get hint</button>
+      </div>
+      <div class="hint" id="hint-1">
+        <p>
+          How can a message be decoded from the sound?
+        </p>
+        <button onclick="revealHint(2)">Didn't help? Get another hint!</button>
+      </div>
+      <div class="hint" id="hint-2">
+        <p>
+          Do you know of a spectrogram before? It's a way to view the waveforms in music
+        </p>
+        <button onclick="revealHint(3)">Get solution</button>
+      </div>
+      <div class="hint" id="hint-3">
+        <p>
+          Download the wav file and run it through a spectrogram viewer. I used
+          <a href="https://nsspot.herokuapp.com/imagetoaudio/"></a>.
+          You should get something akin to this
+        </p>
+        <img src="images/steganographed_audio.png" alt="Steganographed audio with message">
+        <p>
+          Searching the coordinates up in the message yields the landmark you should proceed to
+          <img src="images/coordinates.png" alt="Coordinates">
+          <img src="images/location.png" alt="Petrin Tower">
+
+        </p>
+      </div>
+    </main>
+    <script>
+      const revealHint = (num) => {
+        document.getElementById(`hint-${num}`).style.display = 'inline-block';
+      }
+    </script>
+  </body>
+</html>
+
+

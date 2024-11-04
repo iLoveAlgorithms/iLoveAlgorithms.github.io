@@ -4,7 +4,8 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to bottom, black 0% 25%, grey, darkblue 100%);
+  background-image: linear-gradient(to bottom, black 0% 25%, grey, darkblue);
+  background-attachment: fixed;
   color: snow;
   font-family: 'Courier New', 'roboto', sans-serif, Arial, Helvetica;
 }
