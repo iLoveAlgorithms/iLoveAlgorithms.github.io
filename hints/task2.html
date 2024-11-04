@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 1 Hints</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="banner">
+      <img src="/images/project_icon.png" alt="Organisation icon" width="200px" height="200px">
+      <h1>Locate the suspect!</h1>
+    </header>
+    <main id="main" role="main">
+      <div>
+        <p>
+          Need help finding the suspect?
+        </p>
+        <button onclick="revealHint(1)">Get hint</button>
+      </div>
+      <div class="hint" id="hint-1">
+        <p>
+          Have you worked out all the locations of the associates?
+        </p>
+        <button onclick="revealHint(2)">Didn't help? Get another hint!</button>
+      </div>
+      <div class="hint" id="hint-2">
+        <p>
+          Why would CAPITALS be spelled in capital letters? A bit unneccesary... or...
+        </p>
+        <button onclick="revealHint(3)">Need another one?</button>
+      <div class="hint" id="hint-3">
+        <p>
+          Take the 'X' marks the spot literally!
+        </p>
+        <button onclick="revealHint(4)">Get solution</button>
+      </div>
+      <div class="hint" id="hint-4"></div>
+        <p>
+          Take the 'X' marks the spot literally!
+        </p>
+      </div>
+    </main>
+    <script>
+      const revealHint = (num) => {
+        document.getElementById(`hint-${num}`).style.display = 'inline-block';
+      }
+    </script>
+  </body>
+</html>
+
+

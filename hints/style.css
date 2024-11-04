@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: linear-gradient(to bottom, black 0% 25%, grey, #0fee00 100%);
+  color: snow;
+  font-family: 'Courier New', 'roboto', sans-serif, Arial, Helvetica;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0px;
+}
+
+button {
+  display: inline-block;
+  background-color: #0fee00;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.hint {
+  display: none;
+}
+
+a {
+  color: red;
+  font-weight: bold;
+}
