@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0;
+  padding: 20px;
+  height: 100%;
+}
+
+#element-table {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#key {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
